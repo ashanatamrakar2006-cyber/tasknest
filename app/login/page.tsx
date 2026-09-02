@@ -58,7 +58,7 @@ export default function AuthPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50">
       <div className="w-full max-w-sm space-y-4 p-6 bg-white rounded-lg shadow">
-        <h1 className="text-2xl font-bold text-center">
+        <h1 className="text-2xl font-bold text-center text-gray-900">
           {isSignup ? "Sign Up" : "Login"}
         </h1>
 
@@ -71,7 +71,7 @@ export default function AuthPage() {
               placeholder="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full border p-2 rounded"
+              className="w-full border border-gray-300 p-2 rounded text-gray-900 placeholder-gray-400"
               required
             />
           )}
@@ -80,7 +80,7 @@ export default function AuthPage() {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border p-2 rounded"
+            className="w-full border border-gray-300 p-2 rounded text-gray-900 placeholder-gray-400"
             required
           />
           <div className="relative">
@@ -89,20 +89,20 @@ export default function AuthPage() {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full border p-2 rounded pr-16"
+              className="w-full border border-gray-300 p-2 rounded pr-16 text-gray-900 placeholder-gray-400"
               required
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-sm text-gray-500"
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-sm text-gray-600 font-medium"
             >
               {showPassword ? "Hide" : "Show"}
             </button>
           </div>
           <button
             type="submit"
-            className="w-full bg-black text-white p-2 rounded"
+            className="w-full bg-black text-white p-2 rounded font-medium"
           >
             {isSignup ? "Sign Up" : "Login"}
           </button>
@@ -115,7 +115,7 @@ export default function AuthPage() {
               setIsSignup(!isSignup)
               setError("")
             }}
-            className="text-blue-600 underline"
+            className="text-blue-600 underline font-medium"
           >
             {isSignup ? "Login" : "Sign Up"}
           </button>
@@ -129,7 +129,7 @@ export default function AuthPage() {
 
         <button
           disabled
-          className="w-full border p-2 rounded text-gray-400 cursor-not-allowed"
+          className="w-full border border-gray-300 p-2 rounded text-gray-400 cursor-not-allowed"
         >
           Continue with Google (Coming soon)
         </button>
